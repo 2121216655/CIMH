@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Portal Policial | High City</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="login-screen" class="login-wrap">
+  <div class="login-card">
+    <img src="assets/brasao-high-city.png" class="login-logo" alt="Brasão High City">
+    <p class="eyebrow">HIGH CITY • PORTAL INTERNO</p>
+    <h1>Acesso operacional</h1>
+    <p class="muted">Entre com seu usuário para acessar o portal.</p>
+    <form id="login-form">
+      <label>Usuário<input id="username" autocomplete="username" required placeholder="Seu usuário"></label>
+      <label>Senha<input id="password" type="password" autocomplete="current-password" required placeholder="Sua senha"></label>
+      <button class="primary full" type="submit">Entrar no portal</button>
+      <p id="login-error" class="error" aria-live="polite"></p>
+    </form>
+    <div class="demo-note"><b>Primeiro acesso:</b> usuário <code>admin</code> / senha <code>highcity123</code><br>Troque a senha e cadastre os membros antes de usar.</div>
+  </div>
+</div>
+<div id="app" class="app hidden">
+  <aside class="sidebar">
+    <div class="brand"><img src="assets/brasao-high-city.png" alt=""><div><b>HIGH CITY</b><small>PORTAL POLICIAL</small></div></div>
+    <nav id="nav">
+      <button class="nav-item active" data-page="inicio">⌂ <span>Visão geral</span></button>
+      <button class="nav-item" data-page="cimh">⌕ <span>CIMH • Investigação</span></button>
+      <button class="nav-item" data-page="speed">➤ <span>Speed</span></button>
+      <button class="nav-item" data-page="gaep">◆ <span>GAEP</span></button>
+      <button class="nav-item" data-page="gtm">◈ <span>GTM</span></button>
+      <button class="nav-item" data-page="documentos">▤ <span>Documentos</span></button>
+      <button class="nav-item admin-only" data-page="membros">♙ <span>Membros e cargos</span></button>
+      <button class="nav-item admin-only" data-page="config">⚙ <span>Editar portal</span></button>
+    </nav>
+    <div class="sidebar-bottom"><span class="status-dot"></span> Ambiente High City<br><small>Projeto comunitário FiveM</small></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div><p class="eyebrow" id="crumb">PORTAL INTERNO</p><h2 id="page-title">Visão geral</h2></div><div class="user-chip"><span class="avatar" id="avatar">A</span><span><b id="who">Administrador</b><small id="role-label">Administração</small></span><button id="logout" class="ghost" title="Sair">Sair ↗</button></div></header>
+    <section id="page-content"></section>
+    <footer>HIGH CITY • DISCIPLINA • LEI • ORDEM <span>Portal de roleplay — FiveM</span></footer>
+  </main>
+</div>
+<dialog id="member-dialog"><form id="member-form" method="dialog"><div class="dialog-head"><h3 id="member-dialog-title">Adicionar membro</h3><button type="button" class="ghost" id="close-dialog">✕</button></div>
+<label>Nome de exibição<input id="m-name" required></label><label>Usuário de login<input id="m-user" required pattern="[A-Za-z0-9._-]+" title="Use letras, números, ponto, hífen ou sublinhado"></label><label>Senha inicial<input id="m-pass" type="password" required minlength="6"></label><label>Cargo<select id="m-role"><option value="Membro">Membro</option><option value="Investigador">Investigador</option><option value="Líder de unidade">Líder de unidade</option><option value="Administração">Administração</option></select></label><label>Unidade<select id="m-unit"><option value="CIMH">CIMH • Investigação</option><option value="Speed">Speed</option><option value="GAEP">GAEP</option><option value="GTM">GTM</option><option value="Todas">Todas as unidades</option></select></label><button class="primary full" type="submit">Salvar membro</button><p class="muted small">Protótipo local: contas ficam salvas somente neste navegador.</p></form></dialog>
+<script src="app.js"></script>
+</body></html>

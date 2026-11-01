@@ -1,0 +1,22 @@
+PORTAL POLICIAL HIGH CITY — PRIMEIRA VERSÃO
+============================================
+
+COMO ABRIR
+1. Extraia o arquivo ZIP inteiro para uma pasta.
+2. Abra index.html no navegador (Chrome, Edge ou Firefox).
+3. Login inicial: admin
+   Senha inicial: highcity123
+4. Entre em "Membros e cargos" para cadastrar usuários.
+5. Entre em "Editar portal" para personalizar o texto e exportar um backup.
+6. Em "Documentos", a administração pode cadastrar comunicados e documentos de texto.
+
+ARQUIVOS
+- index.html: estrutura das páginas.
+- style.css: aparência e cores.
+- app.js: navegação e funções do protótipo.
+- assets/: suas duas artes da High City.
+
+IMPORTANTE — LOGIN DE DEMONSTRAÇÃO
+Esta versão é um protótipo local para editar e testar. Usuários, senhas e documentos ficam no armazenamento local do navegador. Isso NÃO é autenticação segura para um site público, e os dados não são compartilhados entre computadores ou navegadores.
+Antes de publicar na internet ou usar com dados reais, é obrigatório trocar o login demonstrativo por autenticação no servidor, banco de dados, proteção de senhas, controle de permissões no backend e HTTPS. Não use a senha de exemplo em ambiente público.
+As unidades e seus nomes são conteúdo de roleplay do FiveM. Edite os textos de acordo com as regras do seu servidor.
